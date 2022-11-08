@@ -4,17 +4,18 @@ import {getCookie} from "../lib/cookies";
 import Post from "../components/Post";
 import "./MainPage.css";
 import Quiz from "../components/Quiz";
+import {API_SERVER_DOMAIN} from "../config";
 
 const MainPage = () => {
 
   const [loading, response, error] = usePromise(() => {
     axios.defaults.headers.common['Authorization'] = getCookie('token');
-    return axios.get("http://localhost:8080/posts")
+    return axios.get(API_SERVER_DOMAIN + "/posts")
   }, [])
 
   const [quiz_loading, quiz_response, quiz_error] = usePromise(() => {
     axios.defaults.headers.common['Authorization'] = getCookie('token');
-    return axios.get("http://localhost:8080/quiz")
+    return axios.get(API_SERVER_DOMAIN + "/quiz")
   }, [])
 
   if (loading || quiz_loading) {

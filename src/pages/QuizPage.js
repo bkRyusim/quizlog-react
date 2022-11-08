@@ -4,6 +4,7 @@ import axios from "axios";
 import {getCookie} from "../lib/cookies";
 import {useLocation, useNavigate} from "react-router-dom";
 import qs from "qs";
+import {API_SERVER_DOMAIN} from "../config";
 
 const QuizPage = () => {
   const [question, setQuestion] = useState("");
@@ -27,7 +28,7 @@ const QuizPage = () => {
     e.preventDefault()
     console.log(question, answer)
     axios.defaults.headers.common['Authorization'] = getCookie('token');
-    axios.post("http://localhost:8080/quiz", {
+    axios.post(API_SERVER_DOMAIN + "/quiz", {
       "question": question,
       "answer": answer,
       "post_url": query.post_url,

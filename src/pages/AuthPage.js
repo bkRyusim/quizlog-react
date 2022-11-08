@@ -3,6 +3,7 @@ import qs from "qs";
 import axios from "axios";
 import {useEffect} from "react";
 import {getCookie, setCookie} from "../lib/cookies";
+import {API_SERVER_DOMAIN} from "../config";
 
 const AuthPage = () => {
   const location = useLocation();
@@ -15,7 +16,7 @@ const AuthPage = () => {
 
   useEffect(() => {
     const fetch = async () => {
-      const res = await axios.post("http://localhost:8080/auth", {
+      const res = await axios.post(API_SERVER_DOMAIN + "/auth", {
         "code": code
       })
 

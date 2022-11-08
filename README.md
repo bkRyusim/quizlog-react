@@ -26,3 +26,10 @@ Project for graduation in `Design Projects(Capstone Design)` in `CAU`.
 ```shell
 npm start
 ```
+
+## Setup
+`config.js` should prepare:
+```js
+export const API_SERVER_DOMAIN = "YOUR_API_DOMAIN.COM"
+export const CLIENT_DOMAIN = window.location.protocol + "//" + window.location.hostname
+```
