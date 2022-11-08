@@ -1,0 +1,36 @@
+.quiz-card {
+  display: flex;
+  justify-content: space-between;
+  background-color: #198063;
+  width: 500px;
+  padding: 20px;
+  border-radius: 10px;
+
+  .question {
+    color: #EEEBDD;
+  }
+
+  .answer {
+    color: #198063;
+    &:hover {
+      color: #EEEBDD;
+    }
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    color: #EEEBDD;
+    &:hover {
+      color: #035a7d;
+    }
+    cursor: pointer;
+    font-size: 9pt;
+  }
+
+
+
+  & + & {
+    margin-top: 1rem;
+  }
+}

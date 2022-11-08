@@ -1,0 +1,39 @@
+.post {
+    display: flex;
+    justify-content: space-between;
+    background-color: #198063;
+    width: 500px;
+    padding: 20px;
+    border-radius: 10px;
+
+    a {
+        font-size: 14pt;
+        text-decoration: none;
+        color: #EEEBDD;
+        &:hover {
+            color: #035a7d;
+        }
+    }
+
+    .date {
+        font-weight: 100;
+        color: #EEEBDD;
+        margin: 0px;
+        margin-top: 10px;
+    }
+
+    .quiz {
+        display: flex;
+        align-items: center;
+        color: #EEEBDD;
+        &:hover {
+            color: #035a7d;
+        }
+        cursor: pointer;
+        font-size: 9pt;
+    }
+
+    & + & {
+        margin-top: 1rem;
+    }
+}
