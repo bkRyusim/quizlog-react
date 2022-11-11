@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Quizlog",
+  "name": "Quizlog - Make quiz with Tistory",
   "icons": [
     {
       "src": "favicon.ico",
